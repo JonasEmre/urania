@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| Urania</title>
+
+    <!-- CSS Import -->
+    <link rel="stylesheet" href="{% static 'core/css/main.css' %}"
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="{% url 'home' %}" class="navbar-link">Urania</a>
+        <ul class="navbar__list">
+          <li class="navbar-item"><a href="{% url 'home' %}" class="navbar-link">Home</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-link">About</a></li>
+        </ul>
+        <a class="hamburger" href="#">
+          <span></span><span></span><span></span>
+        </a>
+      </nav>
+    </header>
+    {% block content%} {% endblock %}
+    <script src="{% static 'core/js/script.js' %}"></script>
+    <!-- <script src="{% static 'core/js/simulation.js' %}"></script> -->
+  </body>
+</html>

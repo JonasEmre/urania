@@ -1,0 +1,73 @@
+{% extends 'core/base.html' %} {% block content%}
+<main>
+  <section class="home-section">
+    <h1 class="text-center text-white display-5 text-bold">Urania</h1>
+    <p class="text-center text-white display-2 text-bold">
+      Explore the stars and celestial bodies.
+    </p>
+  </section>
+
+  {% load static %}
+  <h3 class="text-center">Our Services</h3>
+  <section class="services-section">
+    <!-- Explore Service -->
+    <div class="card">
+      <figure class="card__figure">
+        <img
+          src="{% static 'core/assets/icons/Telescope.svg' %}"
+          alt="Telescope"
+        />
+        <figcaption class="display-1">Explore</figcaption>
+      </figure>
+      <p>
+        Embark on a celestial journey with our state-of-the-art telescopes.
+        Discover the wonders of the universe as you explore distant galaxies,
+        nebulae, and celestial bodies. Uncover the mysteries of the cosmos and
+        witness the beauty of the night sky like never before.
+      </p>
+    </div>
+
+    <!-- Study Service -->
+    <div class="card">
+      <figure class="card__figure">
+        <img
+          src="{% static 'core/assets/icons/Information.svg' %}"
+          alt="Telescope"
+        />
+        <figcaption class="display-1">Study</figcaption>
+      </figure>
+      <p>
+        Immerse yourself in the vast knowledge of astronomy with our
+        comprehensive study materials. From in-depth articles to interactive
+        courses, broaden your understanding of celestial phenomena and
+        scientific discoveries. Ignite your curiosity and deepen your connection
+        to the cosmos.
+      </p>
+    </div>
+
+    <!-- Find Service -->
+    <div class="card">
+      <figure class="card__figure">
+        <img
+          src="{% static 'core/assets/icons/Planets.svg' %}"
+          alt="Telescope"
+        />
+        <figcaption class="display-1">Find</figcaption>
+      </figure>
+      <p>
+        Navigate the cosmos and locate your favorite celestial bodies
+        effortlessly. Our advanced tools and guides empower you to find planets,
+        stars, and constellations with ease. Whether you're a seasoned
+        astronomer or a beginner, let us guide you on a journey to discover the
+        wonders of the universe.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat saepe
+    laborum molestias dicta, iure fuga odit, nemo sed, accusantium consequuntur
+    magni soluta quo unde dolor ad expedita tempore. Ad, harum!
+  </section>
+</main>
+{% endblock %}

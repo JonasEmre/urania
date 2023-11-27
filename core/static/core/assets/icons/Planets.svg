@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 128 128" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Katman-1" vectornator:layerName="Katman 1">
+<path d="M64 126.017L48.8794 120.431L32.9913 117.709L22.6896 105.31L10.2913 95.0087L7.56901 79.1206L1.98253 64L7.56901 48.8794L10.2913 32.9913L22.6896 22.6896L32.9913 10.2913L48.8794 7.56901L64 1.98253L79.1206 7.56901L95.0087 10.2913L105.31 22.6896L117.709 32.9913L120.431 48.8794L126.017 64L120.431 79.1206L117.709 95.0087L105.31 105.31L95.0087 117.709L79.1206 120.431L64 126.017Z" fill="#6a9ba6" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Yıldız 1"/>
+<g opacity="1" vectornator:layerName="Venus Planet">
+<path d="M71.6577 94.6668L32.6879 94.6668C38.0746 98.8508 44.823 101.367 52.1728 101.367C59.5225 101.367 66.271 98.8508 71.6577 94.6668Z" fill="#ffcc80" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+<path d="M27.5089 89.6419C29.0348 91.5111 30.7818 93.1861 32.6896 94.6668L71.6593 94.6668C73.5671 93.1861 75.3141 91.5111 76.84 89.6419L27.5089 89.6419Z" fill="#ffb74d" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+<path d="M23.3366 82.942C24.4571 85.3506 25.8474 87.6068 27.5072 89.6419L76.8366 89.6419C78.4965 87.6068 79.8868 85.3506 81.0073 82.942L23.3366 82.942Z" fill="#ffe0b2" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+<path d="M20.3484 69.5423C20.3484 74.336 21.4388 78.8651 23.3366 82.942L81.009 82.942C82.9067 78.8651 83.9971 74.336 83.9971 69.5423C83.9971 67.8288 83.8229 66.1589 83.5633 64.5174L20.7823 64.5174C20.5226 66.1589 20.3484 67.8288 20.3484 69.5423Z" fill="#ffa726" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+<path d="M21.9933 59.4925C21.4539 61.1122 21.057 62.7922 20.7823 64.5174L83.5616 64.5174C83.2869 62.7922 82.89 61.1122 82.3506 59.4925L21.9933 59.4925Z" fill="#ffe0b2" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+<path d="M52.1728 37.7179C42.2218 37.7179 33.3445 42.2906 27.5089 49.4427L52.1728 51.1177L76.8366 49.4427C71.0011 42.2906 62.1237 37.7179 52.1728 37.7179Z" fill="#ffcc80" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+<path d="M27.5089 49.4427C25.0986 52.3957 23.2244 55.7958 21.9949 59.4925L82.3523 59.4925C81.1212 55.7958 79.2486 52.3957 76.8383 49.4427L27.5089 49.4427Z" fill="#ffb74d" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+</g>
+<g opacity="1" vectornator:layerName="Next Location">
+<path d="M59.8634 37.6236C59.8634 50.4432 76.9295 71.2724 77.6558 72.1503L79.8605 74.824L82.0653 72.1503C82.7916 71.2696 99.8577 50.4432 99.8577 37.6236C99.8577 26.5942 90.8871 17.6265 79.8605 17.6265C68.834 17.6265 59.8634 26.597 59.8634 37.6236ZM81.5162 37.6493L74.0956 30.2316L78.1391 26.1881L89.6032 37.6493L78.1562 49.0963L74.1128 45.0528L81.5162 37.6493Z" fill="#2e3559" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+</g>
+</g>
+</svg>

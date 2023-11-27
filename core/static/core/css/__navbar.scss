@@ -1,0 +1,55 @@
+@import "./_variables.scss";
+@import "./utils";
+@import "./breakpoints";
+
+.navbar {
+  background-color: $midnight-blue;
+  color: $font-white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+
+    @include breakpoints-down(small) {
+      display: none;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    color: $font-white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+}
+
+.hamburger {
+  @include d-flex-center(column);
+  @include breakpoints-up(medium) {
+    display: none;
+  }
+  padding: 1rem;
+
+  span {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: $font-white;
+    border-radius: 0.1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0.25rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

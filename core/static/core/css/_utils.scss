@@ -1,0 +1,47 @@
+@import "./_variables.scss";
+
+// Mixins
+@mixin d-flex-center($direction) {
+  display: flex;
+  flex-flow: $direction wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin linear-transition {
+  transition: all 0.5s linear;
+}
+
+// Text
+.text {
+  &-white {
+    color: $font-white;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-bold {
+    font-weight: bold;
+  }
+}
+
+// Display header sizes.
+.display {
+  &-5 {
+    font-size: 5rem;
+  }
+  &-4 {
+    font-size: 4rem;
+  }
+  &-3 {
+    font-size: 3rem;
+  }
+  &-2 {
+    font-size: 2rem;
+  }
+  &-1 {
+    font-size: 1.5rem;
+  }
+}
