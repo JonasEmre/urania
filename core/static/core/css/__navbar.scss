@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
 @import "./_variables.scss";
-@import "./utils";
-@import "./breakpoints";
+@import "./utils.scss";
+@import "./breakpoints.scss";
 
 .navbar {
   background-color: $midnight-blue;
@@ -16,8 +17,9 @@
     list-style: none;
     display: flex;
     flex-flow: row wrap;
+    margin-right: 1rem;
 
-    @include breakpoints-down(small) {
+    @media (max-width: $laptop) {
       display: none;
     }
   }
@@ -25,31 +27,14 @@
   &-link {
     text-decoration: none;
     color: $font-white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 1rem;
+    padding: 0.25rem;
+    margin-right: 1rem;
   }
 }
 
-.hamburger {
-  @include d-flex-center(column);
-  @include breakpoints-up(medium) {
-    display: none;
-  }
-  padding: 1rem;
-
-  span {
-    width: 2rem;
-    height: 0.25rem;
-    background-color: $font-white;
-    border-radius: 0.1rem;
-
-    &:not(:last-child) {
-      margin-bottom: 0.25rem;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
+.logo {
+  font-family: "Rancho", cursive;
+  letter-spacing: 0.1618rem;
+  font-size: 2.25rem;
+  margin-left: 1rem;
 }

@@ -1,0 +1,10 @@
+@import "./_utils.scss";
+@import "./_variables";
+
+.button {
+    border: 0;
+    border-radius: 0.1rem;
+    background: linear-gradient(72deg, $steel-teal 10%, $deep-azure);
+    padding: 0.618rem;
+    color: $font-white;
+}

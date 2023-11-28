@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %} {% block content%}
+<main class="profile">
+  <div class="profile__user">
+    {% if user.is_authenticated %}
+    <figure>
+      <figcaption>{{ user.username }}</figcaption>
+    </figure>
+    <p>Email: {{ user.email }}</p>
+    {% endif %} Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    Cupiditate magnam at eius suscipit, incidunt autem. Sunt doloribus obcaecati
+    dolores nemo excepturi. Cum, doloremque! Aut, soluta in! Doloremque
+    doloribus voluptate ipsam.
+  </div>
+
+  <!-- Notes -->
+  <div>
+    <h3>My Notes</h3>
+    {% for note in notes %}
+    <div class="note-card">
+      <div class="note-card__head">
+        <h4>{{ note.title }}</h4>
+        <p class="note-card__date">{{ note.date_posted|date:"F, d, Y" }}</p>
+      </div>
+      <p>{{ note.content }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Create Post Form -->
+  <div class="create-post">
+    <form class="create-post__form" method="post" action="{% url 'profile' %}">
+      <legend>Create Note</legend>
+      {% csrf_token %}
+      <div class="create-post__row">{{ form.title }}</div>
+      <div class="create-post__row">{{ form.content }}</div>
+      <div class="create-post__row">
+        <button class="button" type="submit">Create</button>
+      </div>
+    </form>
+  </div>
+</main>
+{% endblock %}

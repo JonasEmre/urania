@@ -1,0 +1,54 @@
+@import "./_variables.scss";
+@import "./utils.scss";
+@import "./breakpoints.scss";
+
+.profile-bg {
+    background-color: $steel-teal;
+}
+
+.profile {
+    display: grid;
+    grid-auto-flow: row;
+
+    @include breakpoints-up(medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__user {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 1rem;
+        margin: 1rem;
+        border: 0.0625rem solid $midnight-blue;
+    }
+}
+
+.note-card {
+    padding: 1rem;
+    border: 0.0625rem solid $midnight-blue;
+    margin: 0.5rem 1rem;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        border-bottom: 0.0625rem solid $midnight-blue;
+    }
+
+    &__date {
+        color:gray;
+        font-size: 0.7rem;
+    }
+}
+
+.create-post {
+    display: flex;
+    padding: 1rem;
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        
+    }
+}
