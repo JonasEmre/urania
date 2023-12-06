@@ -22,7 +22,7 @@
     height: 0.25rem;
     background-color: $font-white;
     border-radius: 1rem;
-    transition: all 0.3s ease-in-out forwards;
+    transition: all 0.4s ease-in-out;
   }
 
   &__line::after,
@@ -40,6 +40,16 @@
 
   @media (min-width: $laptop) {
     display: none;
+  }
+}
+
+.rotate-hamburger {
+  background-color: transparent;
+  &::after {
+    transform: translateX(-1rem) rotate(315deg);
+  }
+  &::before {
+    transform: translateX(-1rem) rotate(-315deg);
   }
 }
 

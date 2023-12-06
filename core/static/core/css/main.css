@@ -268,6 +268,25 @@
   display: flex;
   padding: 1rem;
 }
+.create-post__form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  box-shadow: 0.0625rem 0.0625rem 0.5rem #2e3559;
+  padding: 1rem;
+}
+.create-post__form legend {
+  width: 100%;
+  text-align: center;
+  border-bottom: 0.0625rem solid #2e3559;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.create-post__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .text-white {
   color: #fff7f5;
@@ -316,7 +335,7 @@
   height: 0.25rem;
   background-color: #fff7f5;
   border-radius: 1rem;
-  transition: all 0.3s ease-in-out forwards;
+  transition: all 0.4s ease-in-out;
 }
 .hamburger__line::after, .hamburger__line::before {
   content: "";
@@ -331,6 +350,16 @@
   .hamburger {
     display: none;
   }
+}
+
+.rotate-hamburger {
+  background-color: transparent;
+}
+.rotate-hamburger::after {
+  transform: translateX(-1rem) rotate(315deg);
+}
+.rotate-hamburger::before {
+  transform: translateX(-1rem) rotate(-315deg);
 }
 
 .hamburger-menu {
