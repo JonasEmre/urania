@@ -35,11 +35,11 @@
         </ul>
         <div class="hamburger">
           <button class="hamburger__button" type="button" onclick="showMenu()">
-            <span class="hamburger__line" id="hamburger-line"></span>
+            <span class="hamburger__line" id="hamburgerLine"></span>
           </button>
         </div>
       </nav>
-      <div class="hamburger-menu" id="hamburger-menu">
+      <div class="hamburger-menu" id="hamburgerMenu">
         <ul class="hamburger-menu__list">
           {% if user.is_authenticated %}
           <li class="hamburger-menu__item">
@@ -69,7 +69,7 @@
 
     <!-- Flash Messages -->
     {% if messages %} {% for message in messages %}
-    <div {% if message.tags %} class="message-{{ message.tags }}" {% endif %}>
+    <div {% if message.tags %} class="message-{{ message.tags }} text-center" {% endif %} id="messageContainer">
       {{ message }}
     </div>
     {% endfor %} {% endif %}

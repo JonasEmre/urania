@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
 .text-white {
   color: #fff7f5;
 }
@@ -55,9 +54,9 @@
 }
 
 .logo {
-  font-family: "Rancho", cursive;
   letter-spacing: 0.1618rem;
   font-size: 2.25rem;
+  font-weight: bold;
   margin-left: 1rem;
 }
 
@@ -232,7 +231,6 @@
 
 .profile {
   display: grid;
-  grid-auto-flow: row;
 }
 @media (min-width: 40em) {
   .profile {
@@ -248,44 +246,58 @@
   border: 0.0625rem solid #2e3559;
 }
 
+.create-post {
+  display: flex;
+  padding: 1rem;
+}
+
+.note-form {
+  border: 0.0625rem solid #2e3559;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+  padding: 0.25rem;
+  width: 100%;
+  height: min(30rem, 100%);
+}
+.note-form__title, .note-form__content {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+.note-form__content {
+  height: auto;
+  flex-grow: 1;
+}
+
 .note-card {
   padding: 1rem;
   border: 0.0625rem solid #2e3559;
   margin: 0.5rem 1rem;
 }
 .note-card__head {
-  display: flex;
-  justify-content: space-between;
   align-items: end;
   border-bottom: 0.0625rem solid #2e3559;
+  display: flex;
+  justify-content: space-between;
 }
 .note-card__date {
   color: gray;
   font-size: 0.7rem;
 }
+.note-card__link {
+  color: #2e578c;
+  transition: all 0.3s ease-in-out;
+}
+.note-card__link:hover {
+  color: #6a9ba6;
+}
 
-.create-post {
-  display: flex;
-  padding: 1rem;
-}
-.create-post__form {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  box-shadow: 0.0625rem 0.0625rem 0.5rem #2e3559;
-  padding: 1rem;
-}
-.create-post__form legend {
-  width: 100%;
-  text-align: center;
+.notes-title {
   border-bottom: 0.0625rem solid #2e3559;
-  margin-bottom: 1rem;
-  padding: 1rem;
-}
-.create-post__bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 1rem 0.65rem 1rem;
+  padding: 1rem 1rem 0.35rem 1rem;
 }
 
 .text-white {
@@ -413,6 +425,9 @@ a:visited {
 
 .message, .message-info, .message-error, .message-warning, .message-success {
   padding: 0.25rem;
+  transition: all 0.2s ease-in-out;
+  animation: flash-display 0.5s forwards;
+  transform-origin: left;
 }
 .message-success {
   background-color: #b1eea7;
@@ -427,6 +442,14 @@ a:visited {
   background-color: #86C8F0;
 }
 
+@keyframes flash-display {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .home-section {
   display: flex;
   flex-flow: column wrap;

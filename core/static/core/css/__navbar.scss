@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
 @import "./_variables.scss";
 @import "./utils.scss";
 @import "./breakpoints.scss";
@@ -33,8 +32,8 @@
 }
 
 .logo {
-  font-family: "Rancho", cursive;
   letter-spacing: 0.1618rem;
   font-size: 2.25rem;
+  font-weight: bold;
   margin-left: 1rem;
 }

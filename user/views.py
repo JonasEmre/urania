@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from .forms import RegisterForm, LoginForm
 from notes.models import Note
-from notes.forms import CreatePostForm
+from notes.forms import CreateNoteForm
 
 
 def profile(request):
@@ -14,7 +14,7 @@ def profile(request):
     notes = Note.objects.filter(user_id=request.user)
 
     if request.method == 'POST':
-        form = CreatePostForm(request.POST)
+        form = CreateNoteForm(request.POST)
         if form.is_valid():
             title = form.cleaned_data.get('title')
             content = form.cleaned_data.get('content')
@@ -25,7 +25,7 @@ def profile(request):
         else:
             messages.error(request, 'Invalid note')
     else:
-        form = CreatePostForm()
+        form = CreateNoteForm()
 
     return render(request, 'user/profile.html', {'notes': notes, 'form': form})
 

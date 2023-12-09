@@ -3,69 +3,84 @@
 @import "./breakpoints.scss";
 
 .profile-bg {
-    background-color: $steel-teal;
+  background-color: $steel-teal;
 }
 
 .profile {
-    display: grid;
-    grid-auto-flow: row;
+  display: grid;
 
-    @include breakpoints-up(medium) {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  @include breakpoints-up(medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    &__user {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        padding: 1rem;
-        margin: 1rem;
-        border: 0.0625rem solid $midnight-blue;
-    }
-}
-
-.note-card {
+  &__user {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     padding: 1rem;
+    margin: 1rem;
     border: 0.0625rem solid $midnight-blue;
-    margin: 0.5rem 1rem;
-
-    &__head {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        border-bottom: 0.0625rem solid $midnight-blue;
-    }
-
-    &__date {
-        color:gray;
-        font-size: 0.7rem;
-    }
+  }
 }
 
 .create-post {
+  display: flex;
+  padding: 1rem;
+}
+
+.note-form {
+  border: 0.0625rem solid $midnight-blue;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+  padding: 0.25rem;
+  width: 100%;
+  height: min(30rem, 100%);
+
+  &__title,
+  &__content {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  &__content {
+    height: auto;
+    flex-grow: 1;
+  }
+}
+
+
+.note-card {
+  padding: 1rem;
+  border: 0.0625rem solid $midnight-blue;
+  margin: 0.5rem 1rem;
+
+  &__head {
+    align-items: end;
+    border-bottom: 0.0625rem solid $midnight-blue;
     display: flex;
-    padding: 1rem;
-    
+    justify-content: space-between;
+  }
 
-    &__form {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        box-shadow: 0.0625rem 0.0625rem 0.5rem $midnight-blue;
-        padding: 1rem;
+  &__date {
+    color: gray;
+    font-size: 0.7rem;
+  }
 
-        legend {
-            width: 100%;
-            text-align: center;
-            border-bottom: 0.0625rem solid $midnight-blue;
-            margin-bottom: 1rem;
-            padding: 1rem;
-        }
+  &__link {
+    color: $deep-azure;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $steel-teal;
     }
+  }
+}
 
-    &__bottom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.notes-title {
+  border-bottom: 0.0625rem solid $midnight-blue;
+  margin: 0 1rem 0.65rem 1rem;
+  padding: 1rem 1rem 0.35rem 1rem;
 }
