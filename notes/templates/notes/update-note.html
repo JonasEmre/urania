@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %} {% block content %}
+<main class="note-main">
+  <form method="post" action="">
+    {% csrf_token %}
+    <legend class="note-main__header">Update Note</legend>
+    {{ form.title }}
+    {{ form.content }}
+    <div class="note-main__footer">
+      <button type="submit" class="button">Update</button>
+    </div>
+  </form>
+</main>
+
+{% endblock %}

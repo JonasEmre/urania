@@ -1,2 +1,18 @@
 @import "./_variables";
 
+.note-main {
+    padding: 1rem;
+
+    &__header {
+        border-bottom: 0.0625rem solid $midnight-blue;
+    }
+
+    &__footer {
+        margin: 1rem 0;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 1rem;
+    }
+}

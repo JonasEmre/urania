@@ -1,84 +1,81 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>| Urania</title>
 
-    <!-- CSS Import -->
-    <link rel="stylesheet" href="{% static 'core/css/main.css' %}"
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <a href="{% url 'home' %}" class="navbar-link logo">Urania</a>
-        <ul class="navbar__list">
-          {% if user.is_authenticated %}
-          <li class="navbar-item">
-            <a href="{% url 'profile' %}" class="navbar-link">Profile</a>
-          </li>
-          <li class="navbar-item">
-            <a href="{% url 'logout' %}" class="navbar-link">Logout</a>
-          </li>
-          {% else %}
-          <li class="navbar-item">
-            <a href="{% url 'login' %}" class="navbar-link">Sign In</a>
-          </li>
-          <li class="navbar-item">
-            <a href="{% url 'register' %}" class="navbar-link">Sign Up</a>
-          </li>
-          {% endif %}
-          <li class="navbar-item">
-            <a href="{% url 'about' %}" class="navbar-link">About</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <button class="hamburger__button" type="button" onclick="showMenu()">
-            <span class="hamburger__line" id="hamburgerLine"></span>
-          </button>
-        </div>
-      </nav>
-      <div class="hamburger-menu" id="hamburgerMenu">
-        <ul class="hamburger-menu__list">
-          {% if user.is_authenticated %}
-          <li class="hamburger-menu__item">
-            <a href="{% url 'profile' %}" class="hamburger-menu__link"
-              >Profile</a
-            >
-          </li>
-          <li class="hamburger-menu__item">
-            <a href="{% url 'logout' %}" class="hamburger-menu__link">Logout</a>
-          </li>
-          {% else %}
-          <li class="hamburger-menu__item">
-            <a href="{% url 'login' %}" class="hamburger-menu__link">Sign In</a>
-          </li>
-          <li class="hamburger-menu__item">
-            <a href="{% url 'register' %}" class="hamburger-menu__link"
-              >Sign Up</a
-            >
-          </li>
-          {% endif %}
-          <li class="hamburger-menu__item">
-            <a href="{% url 'about' %}" class="hamburger-menu__link">About</a>
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>| Urania</title>
+
+  <!-- CSS Import -->
+  <link rel="stylesheet" href="{% static 'core/css/main.css' %}" </head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="{% url 'home' %}" class="navbar-link logo">Urania</a>
+      <ul class="navbar__list">
+        {% if user.is_authenticated %}
+        <li class="navbar-item">
+          <a href="{% url 'profile' %}" class="navbar-link">Profile</a>
+        </li>
+        <li class="navbar-item">
+          <a href="{% url 'logout' %}" class="navbar-link">Logout</a>
+        </li>
+        {% else %}
+        <li class="navbar-item">
+          <a href="{% url 'login' %}" class="navbar-link">Sign In</a>
+        </li>
+        <li class="navbar-item">
+          <a href="{% url 'register' %}" class="navbar-link">Sign Up</a>
+        </li>
+        {% endif %}
+        <li class="navbar-item">
+          <a href="{% url 'about' %}" class="navbar-link">About</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <button class="hamburger__button" type="button" onclick="showMenu()">
+          <span class="hamburger__line" id="hamburgerLine"></span>
+        </button>
       </div>
-    </header>
-
-    <!-- Flash Messages -->
-    {% if messages %} {% for message in messages %}
-    <div {% if message.tags %} class="message-{{ message.tags }} text-center" {% endif %} id="messageContainer">
-      {{ message }}
+    </nav>
+    <div class="hamburger-menu" id="hamburgerMenu">
+      <ul class="hamburger-menu__list">
+        {% if user.is_authenticated %}
+        <li class="hamburger-menu__item">
+          <a href="{% url 'profile' %}" class="hamburger-menu__link">Profile</a>
+        </li>
+        <li class="hamburger-menu__item">
+          <a href="{% url 'logout' %}" class="hamburger-menu__link">Logout</a>
+        </li>
+        {% else %}
+        <li class="hamburger-menu__item">
+          <a href="{% url 'login' %}" class="hamburger-menu__link">Sign In</a>
+        </li>
+        <li class="hamburger-menu__item">
+          <a href="{% url 'register' %}" class="hamburger-menu__link">Sign Up</a>
+        </li>
+        {% endif %}
+        <li class="hamburger-menu__item">
+          <a href="{% url 'about' %}" class="hamburger-menu__link">About</a>
+        </li>
+      </ul>
     </div>
-    {% endfor %} {% endif %}
+  </header>
 
-    <!-- Main Content -->
-    {% block content%} {% endblock %}
+  <!-- Flash Messages -->
+  {% if messages %} {% for message in messages %}
+  <div {% if message.tags %} class="message-{{ message.tags }} text-center" {% endif %} id="messageContainer">
+    {{ message }}
+  </div>
+  {% endfor %} {% endif %}
+  <!-- Main Content -->
+  {% block content%} {% endblock %}
 
-    <footer class="footer">&copy; Urania Co.</footer>
-    <script src="{% static 'core/js/script.js' %}"></script>
-    <!-- <script src="{% static 'core/js/simulation.js' %}"></script> -->
-  </body>
+  <footer class="footer">&copy; Urania Co.</footer>
+  <script src="{% static 'core/js/script.js' %}"></script>
+  <!-- <script src="{% static 'core/js/simulation.js' %}"></script> -->
+</body>
+
 </html>

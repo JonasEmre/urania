@@ -1,6 +1,13 @@
 {% extends 'core/base.html' %} {% block content %}
-<h1>{{ note.title }}</h1>
-<p>{{ note.content}}</p>
-<p>{{ note.date_posted }}</p>
-<a href="{% url 'delete-note' note.id %}"><button class="button">Delete</button></a>
+<main class="note-main">
+  <h1 class="note-main__header">{{ note.title }}</h1>
+  <p>{{ note.content}}</p>
+  <p>{{ note.date_posted }}</p>
+  <div class="note-main__footer">
+    <a href="{% url 'delete-note' note.id %}"><button class="button">Delete</button></a>
+
+    <a href="{% url 'update-note' note.id %}"><button class="button">Update</button></a>
+  </div>
+
+</main>
 {% endblock %}

@@ -400,6 +400,21 @@
     transform: scaleY(1);
   }
 }
+.note-main {
+  padding: 1rem;
+}
+.note-main__header {
+  border-bottom: 0.0625rem solid #2e3559;
+}
+.note-main__footer {
+  margin: 1rem 0;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 1rem;
+}
+
 * {
   padding: 0;
   margin: 0;
